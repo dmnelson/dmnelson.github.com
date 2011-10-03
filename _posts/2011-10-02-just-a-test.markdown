@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Adding more content for testing
 ---
 
