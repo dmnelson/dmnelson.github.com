@@ -1,112 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>david.mn</title>
-    <meta name="description" content="">
-    <meta name="author" content="David Michael Nelson">
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-</head>
-<body>
-<div class="topbar">
-    <div class="topbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="/">david.mn</a>
-            <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="sidebar">
-        <div class="well">
-            <h5>Me</h5>
+---
+layout: default
+priority: 1
+id: home
+---
 
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+{% for post in site.posts %}
+<div class="row">
+    <div class="span">
+        <h2>
+            {{ post.title }}
+            <small>@ {{ post.date | date_to_string }}</small>
+        </h2>
+        <p>{{ post.content |strip_html | truncatewords:50 }}</p>
 
-            <p>- <a href="#">more about me</a></p>
-            <h5>Open source</h5>
-            <ul>
-                <li><a href="http://github.com/dmnelson">GitHub account</a></li>
-            </ul>
-            <h5>Social</h5>
-            <ul>
-                <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
-                <li><a href="http://twitter.com/davidmichael">Twitter</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="content">
-        <div class="page-header">
-            <h1>david.mn
-                <small>- Just a bunch of not so relevant thoughts</small>
-            </h1>
-        </div>
-        <div class="content-body">
-            <div class="row">
-                <div class="span7">
-                    <h2>Heading</h2>
-
-                    <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus
-                        posuere
-                        velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                        Duis
-                        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="span7">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                        magna
-                        mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-            <hr>
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="span7">
-                    <h2>Heading</h2>
-
-                    <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus
-                        posuere
-                        velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                        Duis
-                        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-                <div class="span7">
-                    <h2>Heading</h2>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                        magna
-                        mollis euismod. Donec sed odio dui. </p>
-
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>david.mn - Powered by <a href="http://twitter.github.com/bootstrap">Bootstrap, from Twitter</a> and <a
-                    href="http://jekyllrb.com/">Jekyll</a></p>
-        </footer>
+        <p><a class="btn" href="{{ post.url }}">read more &raquo;</a></p>
     </div>
 </div>
 
-</body>
-</html>
+{% unless forloop.last %}
+<hr/>
+{% endunless  %}
+
+{% endfor %}
