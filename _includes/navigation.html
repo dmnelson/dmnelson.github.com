@@ -1,0 +1,12 @@
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="{{site.url}}">david.mn</a>
+            <ul class="nav">
+                <li {% if page.id == 'home' %} class="active" {% endif %}><a href="/">Home</a></li>
+                <li {% if page.id == 'about' %} class="active" {% endif %}><a href="/about.html">About</a></li>
+                <li {% if page.id == 'contact' %} class="active" {% endif %}><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
