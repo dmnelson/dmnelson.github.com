@@ -1,49 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>{{ site.name }}{% if page.title %} - {{page.title}} {% endif %}</title>
-    <meta name="description" content="">
-    <meta name="author" content="David Michael Nelson">
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/custom.css" rel="stylesheet">
-</head>
+{% include head.html %}
 <body>
-<div class="topbar">
-    <div class="topbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="{{site.url}}">david.mn</a>
-            <ul class="nav">
-                <li {% if page.id == 'home' %} class="active" {% endif %}><a href="/">Home</a></li>
-                <li {% if page.id == 'about' %} class="active" {% endif %}><a href="/about.html">About</a></li>
-                <li {% if page.id == 'contact' %} class="active" {% endif %}><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% include navigation.html %}
 <div class="container-fluid">
-    <div class="sidebar">
-        <div class="well">
-            <h5>Me</h5>
-
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-            <p>- <a href="/about.html">more about me</a></p>
-            <h5>Open source</h5>
-            <ul>
-                <li><a href="http://github.com/dmnelson">GitHub account</a></li>
-            </ul>
-            <h5>Social</h5>
-            <ul>
-                <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
-                <li><a href="http://twitter.com/davidmichael">Twitter</a></li>
-            </ul>
-        </div>
-    </div>
+    {% include sidebar.html %}
     <div class="content">
         <div class="page-header">
             <h1>david.mn
@@ -51,13 +12,9 @@
             </h1>
         </div>
         <div class="content-body">
-           {{content}}
+            {{content}}
         </div>
-
-        <footer>
-            <p>david.mn - Powered by <a href="http://twitter.github.com/bootstrap">Bootstrap, from Twitter</a> and <a
-                    href="http://jekyllrb.com/">Jekyll</a></p>
-        </footer>
+        {% include footer.html %}
     </div>
 </div>
 
