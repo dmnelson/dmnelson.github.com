@@ -1,4 +1,4 @@
-@import "http://fonts.googleapis.com/css?family=Allerta+Stencil";
+@import "http://fonts.googleapis.com/css?family=Questrial";
 
 html {
     background-image: url("../images/charcoal.gif");
@@ -33,19 +33,20 @@ body {
     margin-left: 240px;
     margin-bottom: 20px;
     color:#fff;
-    background: #333;
+    background: #333 url("../images/header_bg.png") repeat-y -37px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
   }
 
 .hero-unit h1, .brand{
     color:#fff;
     font-weight: normal;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Questrial', sans-serif;
     font-smooth: always;
-    text-shadow: 1px 1px 1px #aaa, 1px -1px 1px #aaa,  -1px 1px 1px #aaa, -1px -1px 1px #aaa;
+
 }
 .hero-unit h1 small{
     text-shadow: none;
+    margin-left: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
