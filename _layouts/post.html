@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+<head>
+    {% include head.html %}
+    <script type="text/javascript" src="/js/comments.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var comments = Comments({
+                        shortname: 'davidmn',
+                        developerMode: true
+                    });
+            comments.initialize();
+        })
+    </script>
+</head>
 <body>
 {% include navigation.html %}
 <div class="container-fluid">
     {% include sidebar.html %}
+    {% include content_header.html %}
+
     <div class="content">
-        <div class="page-header">
-            <h1>david.mn
-                <small>- Just a bunch of not so relevant thoughts</small>
-            </h1>
-        </div>
+        {% include breadcrumbs.html %}
+
         <div class="content-body">
-            <a class="back" href="/">&laquo; back</a>
+
             <section id="post">
                 <h2>{{page.title}}</h2>
                 {{page.content}}
             </section>
-            <hr />
+            <hr/>
             <section id="comments">
                 <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                    var disqus_shortname = 'davidmn'; // required: replace example with your forum shortname
-                    var disqus_developer = 1;
-                    (function() {
-                        var dsq = document.createElement('script');
-                        dsq.type = 'text/javascript';
-                        dsq.async = true;
-                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
                     powered by Disqus.</a></noscript>
                 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span

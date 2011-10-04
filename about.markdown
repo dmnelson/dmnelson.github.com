@@ -1,8 +1,10 @@
 ---
 layout: default
 title: about
-id: about
+section: about
 ---
+## About me
+
 
 This project <a href="http://github.com//davidmn">Davidmn</a> is awesome.
 

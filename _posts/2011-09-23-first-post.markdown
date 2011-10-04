@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Welcome to 'Davidmn'
+section: blog
 ---
 
 Davidmn is going to be an awesome project. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus

@@ -30,7 +30,7 @@ body {
 .page-header small{
        text-shadow: none;
 }
-a.back{
+.back{
     float:right;
 }
 .span7{
@@ -39,4 +39,14 @@ a.back{
 .container-fluid > .sidebar {
     float: none;
     position: absolute
+}
+.hero-unit{
+    padding: 20px;
+    margin-left: 240px;
+    background: #fff;
+}
+
+.content-body h2{
+    color: #0064CD;
+    margin-bottom: 5px;
 }
