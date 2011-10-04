@@ -20,13 +20,17 @@
     {% include content_header.html %}
 
     <div class="content">
-        {% include breadcrumbs.html %}
+        <ul class="breadcrumb">
+            <li><a href="{{site.url}}">david.mn</a> <span class="divider">&raquo;</span></li>
+            <li><a href="/">blog</a> <span class="divider">&raquo;</span></li>
+            <li class="active">{{page.title}}</li>
+        </ul>
 
         <div class="content-body">
 
             <section id="post">
                 <h2>{{page.title}}</h2>
-                {{page.content}}
+                {{content}}
             </section>
             <hr/>
             <section id="comments">

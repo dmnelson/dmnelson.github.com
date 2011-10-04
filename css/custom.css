@@ -1,8 +1,11 @@
-html{
+@import "http://fonts.googleapis.com/css?family=Allerta+Stencil";
+
+html {
     background-image: url("../images/charcoal.gif");
 }
+
 body {
-    background:transparent;
+    background: transparent;
     padding-top: 60px;
     padding-bottom: 20px;
 }
@@ -16,37 +19,53 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
 
-.content .content-body{
-    position: relative;
-}
-
-.page-header{
-    margin-bottom: 30px;
-}
-.page-header h1 {
-    font-size: 40px;
-    text-shadow: 1px 1px 3px #aaa;
-}
-.page-header small{
-       text-shadow: none;
-}
-.back{
-    float:right;
-}
-.span7{
+.span7 {
     min-width: 45%;
 }
+
 .container-fluid > .sidebar {
     float: none;
     position: absolute
 }
-.hero-unit{
+
+.hero-unit {
     padding: 20px;
     margin-left: 240px;
-    background: #fff;
+    margin-bottom: 20px;
+    color:#fff;
+    background: #333;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  }
+
+.hero-unit h1, .brand{
+    color:#fff;
+    font-weight: normal;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-smooth: always;
+    text-shadow: 1px 1px 1px #aaa, 1px -1px 1px #aaa,  -1px 1px 1px #aaa, -1px -1px 1px #aaa;
+}
+.hero-unit h1 small{
+    text-shadow: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.content-body h2{
+
+.content-body h2 {
     color: #0064CD;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-bottom: 10px;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    filter:none;
+}
+
+.sidebar{
+    margin-top: 120px;
 }

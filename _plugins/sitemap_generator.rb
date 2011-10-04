@@ -26,7 +26,7 @@ module Jekyll
       @dir
     end
   end
-  
+
 
   # Sub-class Jekyll::StaticFile to allow recovery from unimportant exception 
   # when writing the sitemap file.
@@ -36,13 +36,13 @@ module Jekyll
       true
     end
   end
-  
-  
+
+
   # Generates a sitemap.xml file containing URLs of all pages and posts.
   class SitemapGenerator < Generator
     safe true
     priority :low
-    
+
     # Generates the sitemap.xml file.
     #
     #  +site+ is the global Site object.
@@ -53,7 +53,7 @@ module Jekyll
         p = Pathname.new(site_folder)
         p.mkdir
       end
-      
+
       # Write the contents of sitemap.xml.
       File.open(File.join(site_folder, 'sitemap.xml'), 'w') do |f|
         f.write(generate_header())
@@ -61,27 +61,27 @@ module Jekyll
         f.write(generate_footer())
         f.close
       end
-      
+
       # Add a static file entry for the zip file, otherwise Site::cleanup will remove it.
       site.static_files << Jekyll::StaticSitemapFile.new(site, site.dest, '/', 'sitemap.xml')
     end
 
     private
-    
+
     # Returns the XML header.
     def generate_header
       "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
     end
-    
+
     # Returns a string containing the the XML entries.
     #
     #  +site+ is the global Site object.
     def generate_content(site)
-      result   = ''
-      
+      result = ''
+
       # First, try to find any stand-alone pages.      
-      site.pages.each{ |page|
-        path     = page.subfolder + '/' + page.name
+      site.pages.each { |page|
+        path = page.subfolder + '/' + page.name
         mod_date = File.mtime(site.source + path)
 
         # Use the user-specified permalink if one is given.
@@ -99,7 +99,7 @@ module Jekyll
 
         # Remove the trailing 'index.html' if there is one, and just output the folder name.
         if path=~/\/index.html$/
-            path = path[0..-11]
+          path = path[0..-11]
         end
 
         if page.data.has_key?('changefreq')
@@ -107,12 +107,12 @@ module Jekyll
         else
           changefreq = ""
         end
-        
+
         unless path =~/error/
           result += entry(path, mod_date, changefreq, site)
         end
       }
-      
+
       # Next, find all the posts.
       posts = site.site_payload['site']['posts']
       for post in posts do
@@ -125,15 +125,15 @@ module Jekyll
         url = url[0..-11] if url=~/\/index.html$/
         result += entry(url, post.date, changefreq, site)
       end
-      
-        result
+
+      result
     end
 
     # Returns the XML footer.
     def generate_footer
       "\n</urlset>"
     end
-    
+
     # Creates an XML entry from the given path and date.
     #
     #  +path+ is the URL path to the page.
@@ -145,15 +145,17 @@ module Jekyll
       # Remove the trailing slash from the baseurl if it is present, for consistency.
       baseurl = site.config['baseurl']
       baseurl = baseurl[0..-2] if baseurl=~/\/$/
-      
+
       "
   <url>
       <loc>#{baseurl}#{path}</loc>
-      <lastmod>#{date.strftime("%Y-%m-%d")}</lastmod>#{if changefreq.length > 0
-          "\n      <changefreq>#{changefreq}</changefreq>" end}
+      <lastmod>#{date.strftime("%Y-%m-%d")}</lastmod>#{
+      if changefreq.length > 0
+        "\n      <changefreq>#{changefreq}</changefreq>"
+      end}
   </url>"
     end
 
   end
-  
+
 end

@@ -2,16 +2,18 @@
 layout: default
 priority: 1
 section: blog
+title: blog
 ---
 
 {% for post in site.posts %}
 <div class="row">
     <div class="span">
         <h2>
-            <a  href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
             <small>@ {{ post.date | date_to_string }}</small>
         </h2>
-        <p>{{ post.content | strip_html | truncatewords:50 }} - <a class="" href="{{ post.url }}">read more &raquo;</a></p>
+        <p>{{ post.content | strip_html | truncatewords:50}} - <a class="" href="{{ post.url }}">read more &raquo;</a>
+        </p>
 
     </div>
 </div>
