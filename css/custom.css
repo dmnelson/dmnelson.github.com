@@ -49,11 +49,15 @@ body {
     margin-left: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-
+.content-body {
+    padding:  10px 20px;
+}
 .content-body h2 {
-    color: #0064CD;
     margin-bottom: 10px;
+}
+
+.content-body h2, .content-body h2 a, .sidebar h3{
+    color: #00438a;
 }
 
 .breadcrumb {
@@ -69,4 +73,9 @@ body {
 
 .sidebar{
     margin-top: 120px;
+
 }
+
+.sidebar .well{
+}
+
