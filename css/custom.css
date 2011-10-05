@@ -50,12 +50,21 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .content-body {
-    padding:  10px 20px;
+    /*padding:  10px 20px;*/
+
+}
+.content-body p {
+    font-size: 14px;
+    line-height: 2em;
 }
 .content-body h2 {
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
+.content-body h2 a {
+    display: block;
+}
 .content-body h2, .content-body h2 a, .sidebar h3{
     color: #00438a;
 }

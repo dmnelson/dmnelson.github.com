@@ -10,7 +10,7 @@ title: blog
     <div class="span">
         <h2>
             <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>@ {{ post.date | date_to_string }}</small>
+            <small>@ {{ post.date | date_to_long_string }}</small>
         </h2>
         {{ post.content}}
 
