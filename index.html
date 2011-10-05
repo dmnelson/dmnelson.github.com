@@ -12,8 +12,7 @@ title: blog
             <a href="{{ post.url }}">{{ post.title }}</a>
             <small>@ {{ post.date | date_to_string }}</small>
         </h2>
-        <p>{{ post.content | strip_html | truncatewords:50}} - <a class="" href="{{ post.url }}">read more &raquo;</a>
-        </p>
+        {{ post.content}}
 
     </div>
 </div>
