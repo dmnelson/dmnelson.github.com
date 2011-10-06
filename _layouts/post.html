@@ -28,7 +28,11 @@
         <div class="content-body">
 
             <section id="post">
-                <h2>{{page.title}}</h2>
+                <h2 class="post-title">{{page.title}}
+                <small>@ {{ page.date | date_to_long_string }}
+                by <a href="http://twitter.com/davidmichael">David Michael</a>
+            &mdash; <a href="{{ post.url }}">Permalink</a></small>
+                </h2>
                 {{content}}
             </section>
             <hr/>

@@ -8,12 +8,16 @@ title: blog
 {% for post in site.posts %}
 <div class="row">
     <div class="span">
-        <h2>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>@ {{ post.date | date_to_long_string }}</small>
+        <h2 class="post-title">
+            <a  href="{{ post.url }}">{{ post.title }}</a>
+            <small>@ {{ post.date | date_to_long_string }}
+                by <a href="http://twitter.com/davidmichael">David Michael</a>
+            &mdash; <a href="{{ post.url }}">Permalink</a></small>
         </h2>
         {{ post.content}}
-
+        <div class="well">
+            <a href="" class="btn small">No comments</a>
+            </div>
     </div>
 </div>
 

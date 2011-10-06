@@ -14,9 +14,9 @@ body {
     margin-left: 240px;
     background: white;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 1px solid #666;
     border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
 }
 
 .span7 {
@@ -49,21 +49,22 @@ body {
     margin-left: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.content-body {
-    /*padding:  10px 20px;*/
 
-}
 .content-body p {
     font-size: 14px;
     line-height: 2em;
+    padding-bottom: 5px;
 }
 .content-body h2 {
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 10px;
+
 }
 
-.content-body h2 a {
+.content-body h2.post-title small {
+    margin-top: 15px;
     display: block;
+    margin-bottom: 25px;
 }
 .content-body h2, .content-body h2 a, .sidebar h3{
     color: #00438a;
@@ -84,7 +85,3 @@ body {
     margin-top: 120px;
 
 }
-
-.sidebar .well{
-}
-
