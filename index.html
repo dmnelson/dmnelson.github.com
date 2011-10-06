@@ -4,7 +4,6 @@ priority: 1
 section: blog
 title: blog
 ---
-
 {% for post in site.posts %}
 <div class="row">
     <div class="span">
@@ -20,9 +19,7 @@ title: blog
             </div>
     </div>
 </div>
-
 {% unless forloop.last %}
 <hr/>
 {% endunless  %}
-
 {% endfor %}
