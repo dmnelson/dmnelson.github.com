@@ -1,2 +1,8 @@
+## Site configs
+
 name: david.mn
 url: http://david.mn
+title: david.mn
+description: Blog of David Michael Nelson regarding technology, programming and general software development topics
+keywords: David Michael Nelson, software, programming languages, blog
+author: David Michael Nelson

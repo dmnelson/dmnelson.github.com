@@ -50,7 +50,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.content-body p {
+.content-body p, .content-body ul{
     font-size: 14px;
     line-height: 2em;
     padding-bottom: 5px;
