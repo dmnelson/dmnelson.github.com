@@ -6,3 +6,8 @@ title: david.mn
 description: Blog of David Michael Nelson regarding technology, programming and general software development topics
 keywords: David Michael Nelson, software, programming languages, blog
 author: David Michael Nelson
+
+## Jekyll configs
+permalink: /:year/:month/:day/:title/
+lsi: true
+pygments: true

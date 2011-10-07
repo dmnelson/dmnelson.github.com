@@ -61,6 +61,16 @@ body {
 
 }
 
+.content-body h3{
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content-body h4{
+    font-size: 22px;
+}
+
 .content-body h2.post-title small {
     margin-top: 15px;
     display: block;

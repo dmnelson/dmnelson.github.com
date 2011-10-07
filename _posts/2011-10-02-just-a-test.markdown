@@ -2,6 +2,8 @@
 layout: post
 title: Adding more content for testing
 section: blog
+categories:
+- Development
 ---
 
 One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible

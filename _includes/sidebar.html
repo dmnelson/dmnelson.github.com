@@ -7,6 +7,12 @@
 
         <p>- <a href="/about.html">more about me</a></p>
         <hr/>
+        <h2>Categories</h2>
+        <ul>
+            {% for category in site.categories %}
+                <li>{{category.first }} </li>
+            {% endfor %}
+        </ul>
         <h2>Social</h2>
         <ul>
             <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
