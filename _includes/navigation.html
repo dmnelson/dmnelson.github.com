@@ -1,15 +1,15 @@
 <div class="topbar">
     <div class="topbar-inner">
-        <div class="container-fluid">
+        <nav class="container-fluid">
             <a class="brand" href="{{site.url}}">david.mn</a>
             <ul class="nav">
                 <li
                 {% if page.section == 'blog' %} class="active" {% endif %}><a href="/">Blog</a></li>
                 <li
-                {% if page.section == 'about' %} class="active" {% endif %}><a href="/about.html">About Me</a></li>
+                {% if page.section == 'about' %} class="active" {% endif %}><a href="/about/">About me</a></li>
                 <li
-                {% if page.section == 'contact' %} class="active" {% endif %}><a href="#contact">Contact</a></li>
+                {% if page.section == 'contact' %} class="active" {% endif %}><a href="/contact/">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 </div>

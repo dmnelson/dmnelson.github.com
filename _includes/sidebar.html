@@ -1,18 +1,19 @@
-<div class="sidebar">
+<aside class="sidebar">
     <div class="well">
         <h2>Me</h2>
 
         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
             condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-        <p>- <a href="/about.html">more about me</a></p>
+        <p>- <a href="/about/">more about me</a></p>
         <hr/>
         <h2>Categories</h2>
         <ul>
             {% for category in site.categories %}
-                <li>{{category.first }} </li>
+            <li><a href="{{category.first | category_link }}">{{category.first}}</a></li>
             {% endfor %}
         </ul>
+        <hr/>
         <h2>Social</h2>
         <ul>
             <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
@@ -25,4 +26,4 @@
         </ul>
 
     </div>
-</div>
+</aside>

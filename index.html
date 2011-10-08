@@ -1,33 +1,19 @@
 ---
-layout: default
+layout: page
 priority: 1
 section: blog
 title: blog
+permalink: /
 ---
+{% assign show_comment_button = true %}
 {% for post in site.posts %}
-<div class="row">
-    <div class="span">
-        <h2 class="post-title">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>@ {{ post.date | date_to_long_string }}
-                by <a href="http://twitter.com/davidmichael">David Michael</a>.
-                Categories: {{post.categories | join: ', ' }}
-                &mdash; <a href="{{ post.url }}">Permalink</a></small>
-        </h2>
-        {{ post.content}}
-        <p>
-          <small>{{post.tags | join: ', '}}</small>
-        </p>
-        <div class="well">
-            <a href="{{ post.url }}#disqus_thread"  class="btn small">Comment</a>
-        </div>
-    </div>
-</div>
-{% unless forloop.last %}
-<hr/>
-{% endunless  %}
+    {% assign content = post.content %}
+    {% include posts/post.html %}
+    {% include posts/share.html %}
+    {% unless forloop.last %}
+        <hr/>
+    {% endunless  %}
 {% endfor %}
-
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'davidmn'; // required: replace example with your forum shortname

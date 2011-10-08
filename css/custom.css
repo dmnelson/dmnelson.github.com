@@ -1,4 +1,4 @@
-@import "http://fonts.googleapis.com/css?family=Questrial";
+@import "http://fonts.googleapis.com/css?family=Questrial&text=david.mn";
 
 html {
     background-image: url("../images/charcoal.gif");
@@ -32,51 +32,56 @@ body {
     padding: 20px;
     margin-left: 240px;
     margin-bottom: 20px;
-    color:#fff;
+    color: #fff;
     background: #333 url("../images/header_bg.png") repeat-y -37px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-  }
+}
 
-.hero-unit h1, .brand{
-    color:#fff;
+.hero-unit h1, .brand {
+    color: #fff;
     font-weight: normal;
     font-family: 'Questrial', sans-serif;
     font-smooth: always;
 
 }
-.hero-unit h1 small{
+
+.hero-unit h1 small {
     text-shadow: none;
     margin-left: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.content-body p, .content-body ul{
+.content-body p, .content-body ul {
     font-size: 14px;
     line-height: 2em;
     padding-bottom: 5px;
 }
+
 .content-body h2 {
     font-size: 36px;
-    margin-bottom: 10px;
-
+    margin-bottom: 5px;
+    margin-top: 30px;
 }
 
-.content-body h3{
+.content-body article header small {
+    margin-top: 15px;
+    display: block;
+    margin-bottom: 25px;
+    color: #bfbfbf;
+    font-size: 14px;
+}
+
+.content-body h3 {
     font-size: 26px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.content-body h4{
+.content-body h4 {
     font-size: 22px;
 }
 
-.content-body h2.post-title small {
-    margin-top: 15px;
-    display: block;
-    margin-bottom: 25px;
-}
-.content-body h2, .content-body h3, .content-body h2 a, .sidebar h2{
+.content-body h2, .content-body h3, .content-body h2 a, .sidebar h2 {
     color: #00438a;
 }
 
@@ -88,10 +93,27 @@ body {
     border: 0;
     border-bottom: 1px solid #eee;
     background: transparent;
-    filter:none;
+    filter: none;
 }
 
-.sidebar{
+.sidebar {
     margin-top: 120px;
+
+}
+
+.content-body .share-bar {
+    margin-bottom: 0;
+}
+
+.share-bar .comments {
+    float: left;
+    margin-right: 15px;
+}
+.share-bar .share-option{
+    margin-right: 5px;
+}
+.share-bar .addthis_toolbox{
+    padding: 0;
+    padding-top: 5px;
 
 }

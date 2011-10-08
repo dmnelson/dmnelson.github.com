@@ -1,9 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<section class="well share-bar">
 
-</body>
-</html>
+    {% if show_comment_button %}
+        <span class="comments">
+            <a href="{{ post.url }}#disqus_thread" class="btn small primary">Comment</a>
+        </span>
+    {% endif %}
+
+
+    <div class="addthis_toolbox addthis_default_style">
+
+        <span class="share-option">
+            <a href="https://twitter.com/share"
+               class="twitter-share-button" data-related="davidmichael"
+               data-url="{{site.url | append: post.url}}" data-text="{{ post.title }}"
+               data-count="none" data-via="davidmichael">Tweet</a>
+        </span>
+
+        <span class="share-option">
+            <g:plusone size="medium" count="false" href="david.mn/1"></g:plusone>
+        </span>
+
+        <span class="share-option">
+            <iframe src="http://www.facebook.com/plugins/like.php?&layout=button_count&show_faces=false&href={{site.url | append: post.url}}"
+                    scrolling="no" frameborder="0"
+                    style="border:none; width:90px; height:20px">
+            </iframe>
+        </span>
+
+
+    </div>
+
+
+</section>

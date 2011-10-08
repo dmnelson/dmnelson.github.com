@@ -7,67 +7,66 @@
 <meta name="description" content="Blog of David Michael Nelson regarding technology, programming and general software development topics"/>
 <meta name="keywords" content="David Michael Nelson, software, programming languages, blog"/>
 <meta name="author" content="David Michael Nelson"/>
+<script type="text/javascript" src="/js/head.load.min.js"></script>
+<script type="text/javascript">
+    head.js({ jQuery: '/js/jquery-1.6.4.min.js'});
+    head.js({ analytics: '/js/analytics.js'}, function() {
+        analytics().load();
+    });
+    head.js('https://apis.google.com/js/plusone.js')
+    head.js('http://platform.twitter.com/widgets.js')
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+    head.js('http://html5shim.googlecode.com/svn/trunk/html5.js');
+</script>
+<![endif]-->
+
 <link href="/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="/css/custom.css" rel="stylesheet"/>
 <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <link rel="alternate" type="application/atom+xml" title="david.mn Feed" href="/atom.xml"/>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-26088380-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<link rel="canonical" href="http://david.mn/"/>
 
 
+
+    
 </head>
 <body>
 <div class="topbar">
     <div class="topbar-inner">
-        <div class="container-fluid">
+        <nav class="container-fluid">
             <a class="brand" href="http://david.mn">david.mn</a>
             <ul class="nav">
                 <li
                  class="active" ><a href="/">Blog</a></li>
                 <li
-                ><a href="/about.html">About Me</a></li>
+                ><a href="/about/">About me</a></li>
                 <li
-                ><a href="#contact">Contact</a></li>
+                ><a href="/contact/">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 </div>
 <div class="container-fluid">
-    <div class="sidebar">
+    <aside class="sidebar">
     <div class="well">
         <h2>Me</h2>
 
         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
             condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-        <p>- <a href="/about.html">more about me</a></p>
+        <p>- <a href="/about/">more about me</a></p>
         <hr/>
         <h2>Categories</h2>
         <ul>
             
-                <li>Development </li>
+            <li><a href="/categories/automation/">Automation</a></li>
             
-                <li>Automation </li>
+            <li><a href="/categories/development/">Development</a></li>
             
         </ul>
+        <hr/>
         <h2>Social</h2>
         <ul>
             <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
@@ -80,59 +79,96 @@
         </ul>
 
     </div>
-</div>
-    <div class="hero-unit">
+</aside>
+    <header class="hero-unit">
     <h1>david.mn
         <small>Just a bunch of not so relevant thoughts</small>
     </h1>
-</div>
-
+</header>
     <div class="content">
         <ul class="breadcrumb">
-            <li><a href="http://david.mn">david.mn</a> <span class="divider">&raquo;</span></li>
-            <li class="active">blog</li>
-        </ul>
+    <li><a href="http://david.mn">david.mn</a> <span class="divider">&raquo;</span></li>
+    <li class="active">blog</li>
+</ul>
+<div class="content-body">
+    
 
-        <div class="content-body">
-            
-<div class="row">
-    <div class="span">
+    
+    <article>
+    <header>
         <h2 class="post-title">
             <a href="/2011/10/02/just-a-test/">Adding more content for testing</a>
-            <small>@ 02 October 2011
-                by <a href="http://twitter.com/davidmichael">David Michael</a>.
-                Categories: Development
-                &mdash; <a href="/2011/10/02/just-a-test/">Permalink</a></small>
+
         </h2>
-        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. <strong>The bedding was hardly able to cover it and seemed ready to slide off any moment.</strong></p>
+        <small>@ 02 October 2011
+            by <a href="http://twitter.com/davidmichael">David Michael</a>
+            &mdash;
+            Categories: <a class='category' href='/categories/development'>Development</a>
+            &mdash; <a href="/2011/10/02/just-a-test/">Permalink</a></small>
+    </header>
+    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. <strong>The bedding was hardly able to cover it and seemed ready to slide off any moment.</strong></p>
 
 <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. <em>&#8220;What&#8217;s happened to me? &#8221;</em> he thought. It wasn&#8217;t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
 
 <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
 
 <p>Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. &#8220;How about if I sleep a little bit longer and forget all this nonsense&#8221;, he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn&#8217;t get into that position. However hard he threw himself onto his right, he always rolled back to where he was.</p>
-        <p>
-          <small></small>
-        </p>
-        <div class="well">
-            <a href="/2011/10/02/just-a-test/#disqus_thread"  class="btn small">Comment</a>
-        </div>
+    <p>
+        <small></small>
+    </p>
+</article>
+    <section class="well share-bar">
+
+    
+        <span class="comments">
+            <a href="/2011/10/02/just-a-test/#disqus_thread" class="btn small primary">Comment</a>
+        </span>
+    
+
+
+    <div class="addthis_toolbox addthis_default_style">
+
+        <span class="share-option">
+            <a href="https://twitter.com/share"
+               class="twitter-share-button" data-related="davidmichael"
+               data-url="http://david.mn/2011/10/02/just-a-test/" data-text="Adding more content for testing"
+               data-count="none" data-via="davidmichael">Tweet</a>
+        </span>
+
+        <span class="share-option">
+            <g:plusone size="medium" count="false" href="david.mn/1"></g:plusone>
+        </span>
+
+        <span class="share-option">
+            <iframe src="http://www.facebook.com/plugins/like.php?&layout=button_count&show_faces=false&href=http://david.mn/2011/10/02/just-a-test/"
+                    scrolling="no" frameborder="0"
+                    style="border:none; width:90px; height:20px">
+            </iframe>
+        </span>
+
+
     </div>
-</div>
-
-<hr/>
 
 
-<div class="row">
-    <div class="span">
+</section>
+    
+        <hr/>
+    
+
+    
+    <article>
+    <header>
         <h2 class="post-title">
             <a href="/2011/09/23/first-post/">Welcome to 'Davidmn'</a>
-            <small>@ 23 September 2011
-                by <a href="http://twitter.com/davidmichael">David Michael</a>.
-                Categories: Development, Automation
-                &mdash; <a href="/2011/09/23/first-post/">Permalink</a></small>
+
         </h2>
-        <p>Davidmn is going to be an awesome project. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        <small>@ 23 September 2011
+            by <a href="http://twitter.com/davidmichael">David Michael</a>
+            &mdash;
+            Categories: <a class='category' href='/categories/automation'>Automation</a>, <a class='category' href='/categories/development'>Development</a>
+            &mdash; <a href="/2011/09/23/first-post/">Permalink</a></small>
+    </header>
+    <p>Davidmn is going to be an awesome project. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 
 <h4 id='david_michael_software_development'>david michael, software development</h4>
 
@@ -145,16 +181,45 @@
 </ul>
 
 <p>Duis mollis, est non commodo luctus, <em>nisi erat</em> porttitor ligula, eget lacinia odio sem nec elit.</p>
-        <p>
-          <small>chef, dev enviroment, continuous</small>
-        </p>
-        <div class="well">
-            <a href="/2011/09/23/first-post/#disqus_thread"  class="btn small">Comment</a>
-        </div>
+    <p>
+        <small>chef, dev enviroment, continuous</small>
+    </p>
+</article>
+    <section class="well share-bar">
+
+    
+        <span class="comments">
+            <a href="/2011/09/23/first-post/#disqus_thread" class="btn small primary">Comment</a>
+        </span>
+    
+
+
+    <div class="addthis_toolbox addthis_default_style">
+
+        <span class="share-option">
+            <a href="https://twitter.com/share"
+               class="twitter-share-button" data-related="davidmichael"
+               data-url="http://david.mn/2011/09/23/first-post/" data-text="Welcome to 'Davidmn'"
+               data-count="none" data-via="davidmichael">Tweet</a>
+        </span>
+
+        <span class="share-option">
+            <g:plusone size="medium" count="false" href="david.mn/1"></g:plusone>
+        </span>
+
+        <span class="share-option">
+            <iframe src="http://www.facebook.com/plugins/like.php?&layout=button_count&show_faces=false&href=http://david.mn/2011/09/23/first-post/"
+                    scrolling="no" frameborder="0"
+                    style="border:none; width:90px; height:20px">
+            </iframe>
+        </span>
+
+
     </div>
-</div>
 
 
+</section>
+    
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -169,12 +234,14 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
-        </div>
+</div>
+
         <footer>
     <p>david.mn - Powered by <a href="http://twitter.github.com/bootstrap">Bootstrap, from Twitter</a> and <a
             href="http://jekyllrb.com/">Jekyll</a></p>
 </footer>
     </div>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,17 @@
+<article>
+    <header>
+        <h2 class="post-title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+
+        </h2>
+        <small>@ {{ post.date | date_to_long_string }}
+            by <a href="http://twitter.com/davidmichael">David Michael</a>
+            &mdash;
+            Categories: {{post.categories | category_links }}
+            &mdash; <a href="{{ post.url }}">Permalink</a></small>
+    </header>
+    {{content}}
+    <p>
+        <small>{{post.tags | join: ', '}}</small>
+    </p>
+</article>

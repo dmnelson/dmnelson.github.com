@@ -4,28 +4,25 @@
 <meta name="description" content="{{site.description}}"/>
 <meta name="keywords" content="{{site.keywords}}"/>
 <meta name="author" content="{{site.author}}"/>
+<script type="text/javascript" src="/js/head.load.min.js"></script>
+<script type="text/javascript">
+    head.js({ jQuery: '/js/jquery-1.6.4.min.js'});
+    head.js({ analytics: '/js/analytics.js'}, function() {
+        analytics().load();
+    });
+    head.js('https://apis.google.com/js/plusone.js')
+    head.js('http://platform.twitter.com/widgets.js')
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+    head.js('http://html5shim.googlecode.com/svn/trunk/html5.js');
+</script>
+<![endif]-->
+
 <link href="/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="/css/custom.css" rel="stylesheet"/>
 <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <link rel="alternate" type="application/atom+xml" title="{{site.name}} Feed" href="/atom.xml"/>
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-26088380-1']);
-    _gaq.push(['_trackPageview']);
+<link rel="canonical" href="{{site.url | append: page.url}}"/>
 
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
