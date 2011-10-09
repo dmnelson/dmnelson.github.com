@@ -11,5 +11,6 @@ end
 
 get '*/' do |path|
     file = File.join('_site', path, 'index.html')
-    send_file file
+    file = File.join(file, 'index.html') unless file =~ /\.[a-z]+$/i
+    File.exist?(file) ? send_file(file) : 404
 end
