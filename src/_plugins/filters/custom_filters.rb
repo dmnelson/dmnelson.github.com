@@ -8,6 +8,22 @@ module DavidMn
       "#{dir}/#{category_slug}/"
     end
 
+    def tag_links(tags)
+      dir = @context.registers[:site].config['tag_dir'] || '/tag'
+      tags = tags.sort!.map do |item|
+        "<a class='tag' href='#{File.join(dir, item)}'>#{item}</a>"
+      end
+
+      case tags.length
+        when 0
+          ""
+        when 1
+          tags[0].to_s
+        else
+          "#{tags[0...-1].join(', ')}, #{tags[-1]}"
+      end
+    end
+
   end
 end
 

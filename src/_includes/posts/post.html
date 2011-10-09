@@ -11,7 +11,9 @@
             &mdash; <a href="{{ post.url }}">Permalink</a></small>
     </header>
     {{content}}
+    {% if post.tags.size > 0 %}
     <p>
-        <small>{{post.tags | join: ', '}}</small>
+       <small><strong>Tags:</strong>  {{post.tags | tag_links }}</small>
     </p>
+    {% endif %}
 </article>
