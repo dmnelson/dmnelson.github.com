@@ -1,14 +1,11 @@
-require 'rubygems'
-require 'sinatra'
-
-set :public, Proc.new { File.join(root, "_site") }
-
-# Added headers for Varnish
 before do
-  response.headers['Cache-Control'] = 'public, max-age=36000'
+  cache_control :public, :max_age => 31557600
 end
 
+get '/' do
+  send_file(File.join(settings.public, 'index.html'), :disposition => nil)
+end
 
 get '/*' do
-	File.read("_site/#{params[:title]}/index.html")
+  send_file(File.join(settings.public, params[:splat]), :disposition => nil)
 end
