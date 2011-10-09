@@ -11,7 +11,7 @@ module DavidMn
     def tag_links(tags)
       dir = @context.registers[:site].config['tag_dir'] || '/tag'
       tags = tags.sort!.map do |item|
-        "<a class='tag' href='#{File.join(dir, item)}'>#{item}</a>"
+        "<a class='tag' href='#{File.join(dir, item)}/'>#{item}</a>"
       end
 
       case tags.length

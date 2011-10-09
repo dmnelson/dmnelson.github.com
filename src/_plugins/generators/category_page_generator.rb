@@ -114,7 +114,7 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir'] || '/categories'
       categories = categories.sort!.map do |item|
-        "<a class='category' href='#{File.join(dir,CategoryIndex::category_slug(item))}'>#{item}</a>"
+        "<a class='category' href='#{File.join(dir,CategoryIndex::category_slug(item))}/'>#{item}</a>"
       end
 
       case categories.length
