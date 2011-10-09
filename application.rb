@@ -9,7 +9,7 @@ before do
     response.headers['Cache-Control'] = 'public, max-age=31557600' # 1 year
 end
 
-get '*/' do |path|
+get '/*' do |path|
     file = File.join('_site', path, 'index.html')
     file = File.join(file, 'index.html') unless file =~ /\.[a-z]+$/i
     File.exist?(file) ? send_file(file) : 404
