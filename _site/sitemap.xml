@@ -18,11 +18,11 @@
         <priority>1</priority>
     </url>
     <url>
-        <loc>http://david.mn/categories/development/</loc>
+        <loc>http://david.mn/category/development/</loc>
         <lastmod>2011-10-08T00:32:18-03:00</lastmod>
     </url>
     <url>
-        <loc>http://david.mn/categories/automation/</loc>
+        <loc>http://david.mn/category/automation/</loc>
         <lastmod>2011-10-08T00:32:18-03:00</lastmod>
     </url>
 </urlset>

@@ -11,3 +11,7 @@ author: David Michael Nelson
 permalink: /:year/:month/:day/:title/
 lsi: true
 pygments: true
+source: ./src/
+plugins: ./src/_plugins
+category_dir: /category
+

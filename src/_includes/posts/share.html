@@ -2,7 +2,8 @@
 
     {% if show_comment_button %}
         <span class="comments">
-            <a href="{{ post.url }}#disqus_thread" class="btn small primary">Comment</a>
+            <a href="{{ site.url | append: post.url }}#disqus_thread" class="btn small primary"
+                    data-disqus-identifier="{{post.id}}">Comment</a>
         </span>
     {% endif %}
 
