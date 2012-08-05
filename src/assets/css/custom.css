@@ -115,25 +115,26 @@ footer {
 
 }
 
-.content-body .share-bar {
-  margin-bottom: 0;
-}
-
-.share-bar .comments {
-  float: left;
-  margin-right: 15px;
-}
-.share-bar .share-option{
-  margin-right: 5px;
-}
-.share-bar .addthis_toolbox{
-  padding: 0;
-  padding-top: 5px;
-}
-
 .coderwall a{
   margin-right: 5px;
 }
+.coderwall a:hover{
+  opacity:0.6;
+}
 .coderwall a img{
   margin-top: 5px;
+  width: 55px;
+  height: 55px;
+}
+
+.os-repos i{
+  margin-right: 5px !important;
+}
+
+.web_contacts a, .os-repos i{
+  opacity:0.6;
+}
+.web_contacts a:hover, .os-repos a:hover i{
+  text-decoration: none;
+  opacity: 1;
 }

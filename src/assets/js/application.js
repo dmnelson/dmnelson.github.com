@@ -1,11 +1,12 @@
 (function($){
 
   var coderwall = {
+
     USERNAME : "davidmn",
     URL      : "http://www.coderwall.com/",
     JSON     : ".json?callback=?",
 
-    retrieveAchievements : function (callback){
+    retrieveAchievements: function (callback){
       $.getJSON(coderwall.URL + coderwall.USERNAME + coderwall.JSON, function(data) {
         callback.call(this, data.data.badges);
       });
@@ -39,7 +40,7 @@
 
   var github = {
     
-    REPOS_URL: "https://api.github.com/users/dmnelson/repos",
+    REPOS_URL : "https://api.github.com/users/dmnelson/repos",
 
     retrieveRepositories: function (callback){
       $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc'}, function(data) {
@@ -52,7 +53,7 @@
         'class': 'has_tooltip',
         'href': repository.html_url,
         'title': repository.description
-      }, repository.name).prepend(ui.createElement('i', {'class': 'icon-book'}));
+      }, repository.name).prepend(ui.createElement('i', {'class': 'icon-screenshot'}));
       return ui.createElement('li').append(link); 
     },
 
@@ -100,6 +101,7 @@
   $(function($) {
     coderwall.retrieveAchievements(coderwall.addBadgesToWall);
     github.retrieveRepositories(github.addReposToWall);
+    ui.tooltip('.web_contacts');
   });
 
 })(jQuery);
