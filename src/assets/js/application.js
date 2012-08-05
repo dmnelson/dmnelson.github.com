@@ -1,15 +1,12 @@
 (function($){
 
-  var CODERWALL_USERNAME = "davidmn";
-  var CODERWALL_URL      = "http://www.coderwall.com/";
-  var GITHUB_USERNAME = "dmnelson";
-
-  var JSON     = ".json?callback=?";
-
   var coderwall = {
+    USERNAME : "davidmn",
+    URL      : "http://www.coderwall.com/",
+    JSON     : ".json?callback=?",
 
     retrieveAchievements : function (callback){
-      $.getJSON(CODERWALL_URL + CODERWALL_USERNAME + JSON, function(data) {
+      $.getJSON(coderwall.URL + coderwall.USERNAME + coderwall.JSON, function(data) {
         callback.call(this, data.data.badges);
       });
     },
@@ -18,7 +15,7 @@
       var img = ui.createImage({
         src: achievement.badge,
         alt: achievement.name,
-        href: CODERWALL_URL + CODERWALL_USERNAME
+        href: coderwall.URL + coderwall.USERNAME
       });
       var link = ui.createLink({
         'class': 'has_tooltip',
