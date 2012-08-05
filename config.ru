@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'sinatra'
-require './application'
+require 'rack/jekyll'
 
-
-run Sinatra::Application
+run Rack::Jekyll.new
