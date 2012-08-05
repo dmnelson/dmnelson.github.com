@@ -1,29 +1,33 @@
 <aside class="sidebar">
-    <div class="well">
-        <h2>Me</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-        <p>- <a href="/about/">more about me</a></p>
-        <hr/>
-        <h2>Categories</h2>
-        <ul>
-            {% for category in site.categories %}
-            <li><a href="{{category.first | category_link }}">{{category.first}}</a></li>
-            {% endfor %}
-        </ul>
-        <hr/>
-        <h2>Social</h2>
-        <ul>
-            <li><a href="http://br.linkedin.com/in/davidmichaelnelson">LinkedIn</a></li>
-            <li><a href="http://twitter.com/davidmichael">Twitter (@davidmichael)</a></li>
-        </ul>
-        <hr/>
-        <h2>Open source</h2>
-        <ul>
-            <li><a href="http://github.com/dmnelson">GitHub account</a></li>
-        </ul>
-
-    </div>
+  <div class="well">
+    <ul class="nav nav-list">
+      <li class="nav-header">On the web</li>
+      <li>
+      <section class="web_contacts">
+        <a href="http://br.linkedin.com/in/davidmichaelnelson">
+          <img src="/assets/images/big_icons/glyphicons_377_linked_in.png" alt="LinkedIn" title="LinkedIn" class="has_tooltip" />
+        </a>
+        <a href="http://github.com/dmnelson">
+          <img src="/assets/images/big_icons/glyphicons_381_github.png"  alt="GitHub" title="GitHub" class="has_tooltip" />
+        </a>
+        <a href="http://twitter.com/davidmichael">
+          <img src="/assets/images/big_icons/glyphicons_392_twitter.png" alt="Twitter" title="@davidmichael - twitter" class="has_tooltip" />
+        </a>
+        <a href="http://www.facebook.com/davidmichael.nelson">
+          <img src="/assets/images/big_icons/glyphicons_390_facebook.png" alt="Facebook" title="Facebook" class="has_tooltip" />
+        </a>
+      </section>
+      </li>
+      <li class="divider"></li>
+      <li class="nav-header">Coderwall</li>
+      <li>
+      <section class="coderwall" data-coderwall-username="davidmn" data-coderwall-orientation="vertical"></section>
+      </li>
+    </ul>
+    <ul class="nav nav-list">
+      <li class="divider"></li>
+      <li class="nav-header">GitHub Repositories</li>
+    </ul>
+    <section class="os-repos"></section>
+  </div>
 </aside>
