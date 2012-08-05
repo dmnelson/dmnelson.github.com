@@ -1,12 +1,10 @@
-<div class="topbar">
-    <div class="topbar-inner">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
         <nav class="container-fluid">
             <a class="brand" href="{{site.url}}">david.mn</a>
             <ul class="nav">
                 <li
-                {% if page.section == 'blog' %} class="active" {% endif %}><a href="/">Blog</a></li>
-                <li
-                {% if page.section == 'about' %} class="active" {% endif %}><a href="/about/">About me</a></li>
+                {% if page.section == 'home' %} class="active" {% endif %}><a href="/">Home</a></li>
                 <li
                 {% if page.section == 'contact' %} class="active" {% endif %}><a href="/contact/">Contact</a></li>
             </ul>
