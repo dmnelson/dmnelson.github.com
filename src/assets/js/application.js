@@ -7,9 +7,13 @@
     JSON     : ".json?callback=?",
 
     retrieveAchievements: function (callback){
-      $.getJSON(coderwall.URL + coderwall.USERNAME + coderwall.JSON, function(data) {
-        callback.call(this, data.data.badges);
-      });
+      try {
+        $.getJSON(coderwall.URL + coderwall.USERNAME + coderwall.JSON, function(data) {
+          callback.call(this, data.data.badges);
+        });
+      } catch(e){
+        coderwall.getWall().text("Oops... could not get badges from CoderWall. Check it out: " + coderwall.URL + coderwall.USERNAME);
+      }
     },
 
     createAchievementBadge: function(achievement){
@@ -39,13 +43,17 @@
   };
 
   var github = {
-    
+
     REPOS_URL : "https://api.github.com/users/dmnelson/repos",
 
     retrieveRepositories: function (callback){
-      $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc'}, function(data) {
-        callback.call(this, data);
-      });
+      try {
+        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc'}, function(data) {
+          callback.call(this, data);
+        });
+      } catch(e) {
+        github.getWall().text('Something happened when tried to get data from GitHub. Try to look there: http://github.com/dmnelson');
+      }
     },
 
     createRepoLink: function(repository){
