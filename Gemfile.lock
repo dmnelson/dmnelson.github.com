@@ -38,6 +38,7 @@ GEM
     jekyll-less (0.0.4)
       jekyll (>= 0.10.0)
       less (>= 2.0.5)
+    kgio (2.7.4)
     kramdown (0.13.7)
     launchy (2.1.2)
       addressable (~> 2.3)
@@ -51,6 +52,7 @@ GEM
     netrc (0.7.5)
     posix-spawn (0.3.6)
     rack (1.4.1)
+    raindrops (0.10.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.9)
@@ -61,6 +63,10 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
+    unicorn (4.3.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -72,3 +78,4 @@ DEPENDENCIES
   rack-jekyll!
   therubyracer
   thin
+  unicorn
