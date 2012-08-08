@@ -49,12 +49,12 @@
 
   var github = {
 
-    REPOS_URL : "https://api.github.com/users/dmnelson/repos?callback=?",
+    REPOS_URL : "https://api.github.com/users/dmnelson/repos?callback=?&sort=pushed&direction=desc",
 
     retrieveRepositories: function (callback){
       try {
-        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc' }, function(data) {
-          callback.call(this, data);
+        $.getJSON(github.REPOS_URL, function(data) {
+          callback.call(this, data.data);
         });
       } catch(e) {
         github.getWall().text('Something happened when tried to get data from GitHub. Try to look there: http://github.com/dmnelson');
