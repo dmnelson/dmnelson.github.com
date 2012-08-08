@@ -3,7 +3,7 @@
   var coderwall = {
 
     USERNAME : "davidmn",
-    URL      : "http://www.coderwall.com/",
+    URL      : "http://coderwall.com/",
     JSON     : ".json?callback=?",
 
     retrieveAchievements: function (callback){
@@ -49,11 +49,11 @@
 
   var github = {
 
-    REPOS_URL : "https://api.github.com/users/dmnelson/repos",
+    REPOS_URL : "https://api.github.com/users/dmnelson/repos?callback=?",
 
     retrieveRepositories: function (callback){
       try {
-        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc', callback: '?'}, function(data) {
+        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc' }, function(data) {
           callback.call(this, data);
         });
       } catch(e) {
