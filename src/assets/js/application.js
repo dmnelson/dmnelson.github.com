@@ -53,7 +53,7 @@
 
     retrieveRepositories: function (callback){
       try {
-        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc'}, function(data) {
+        $.getJSON(github.REPOS_URL, {sort: 'pushed', direction: 'desc', callback: '?'}, function(data) {
           callback.call(this, data);
         });
       } catch(e) {
