@@ -19,22 +19,27 @@
     createAchievementBadge: function(achievement){
       var img = ui.createImage({
         src: achievement.badge,
-        alt: achievement.name,
-        href: coderwall.URL + coderwall.USERNAME
+        alt: achievement.name
       });
       var link = ui.createLink({
         'class': 'has_tooltip',
+        'href': coderwall.URL + coderwall.USERNAME,
         'title': achievement.name + ": " + achievement.description
       }).append(img);
       return link;
     },
 
     addBadgesToWall: function(achievement){
-      $.each(achievement, function(i, item){
-        var badge = coderwall.createAchievementBadge(item);
-        badge.appendTo(coderwall.getWall());
+      var wall = coderwall.getWall();
+      wall.ready(function(){
+        wall.hide();
+        $.each(achievement, function(i, item){
+          var badge = coderwall.createAchievementBadge(item);
+          badge.appendTo(wall);
+        });
+        ui.tooltip(wall, {placement: 'right'});
+        wall.show("fast");
       });
-      ui.tooltip(coderwall.getWall(), {placement: 'right'});
     },
 
     getWall : function(){
@@ -67,11 +72,15 @@
 
     addReposToWall: function(repos){
       var wall = github.getWall();
-      var list = ui.createElement('ul', {'class': 'nav nav-list'}).appendTo(wall);
-      $.each(repos, function(i, item){
-        list.append(github.createRepoLink(item)); 
+      wall.hide();
+      wall.ready(function(){
+        var list = ui.createElement('ul', {'class': 'nav nav-list'}).appendTo(wall);
+        $.each(repos, function(i, item){
+          list.append(github.createRepoLink(item)); 
+        });
+        ui.tooltip(wall, {placement: 'top'});
+        wall.show("fast");
       });
-      ui.tooltip(wall, {placement: 'top'});
     },
 
     getWall: function(){
@@ -106,10 +115,13 @@
     }
   };
 
-  $(function($) {
-    coderwall.retrieveAchievements(coderwall.addBadgesToWall);
-    github.retrieveRepositories(github.addReposToWall);
-    ui.tooltip('.web_contacts');
-  });
 
-})(jQuery);
+  return {
+    initialize : function(){
+      coderwall.retrieveAchievements(coderwall.addBadgesToWall);
+      github.retrieveRepositories(github.addReposToWall);
+      ui.tooltip('.web_contacts');
+    }
+  };
+
+})(jQuery).initialize();
