@@ -124,15 +124,18 @@
     setup : function(element){
       var form = $(element); 
       form.submit(function(event){
+        $('.notifications').empty();
         try{
           event.preventDefault(); 
-          $.post(form.attr('action'), form.serialize(), function(){
-            alert('aa')
-            $('.notifications').append(ui.alertSuccess('Thanks! Your message was sent successfully and will soon be read.'));
+          $.post(form.attr('action'), form.serialize()).complete(function(){
+            var alert = ui.alertSuccess('Thanks! Your message was sent successfully and will soon be read.').hide();
+            $('.notifications').append(alert);
+            alert.show('slow');
           });
+          
         } catch (e) {
-          $('.notifications').append(ui.alertSuccess('Oops! Sorry, something happened and your message was not sent. Please try again later.'));
-          alert('bb')
+          $('.notifications').append(ui.alertSuccess('Oops! Sorry, something happened and your message was not sent. Please try again later.').hide());
+          $('.notifications div').show('slow');
         }
         return false;
       });
