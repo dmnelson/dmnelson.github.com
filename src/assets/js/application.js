@@ -112,15 +112,39 @@
       head.ready('jquery-tooltip', function(){
         $('.has_tooltip', parent).tooltip(options);
       });
+    },
+
+    alertSuccess: function(text){
+      return $('<div class="alert alert-success" />').text(text);
     }
   };
 
+
+  var contactForm = {
+    setup : function(element){
+      var form = $(element); 
+      form.submit(function(event){
+        try{
+          event.preventDefault(); 
+          $.post(form.attr('action'), form.serialize(), function(){
+            alert('aa')
+            $('.notifications').append(ui.alertSuccess('Thanks! Your message was sent successfully and will soon be read.'));
+          });
+        } catch (e) {
+          $('.notifications').append(ui.alertSuccess('Oops! Sorry, something happened and your message was not sent. Please try again later.'));
+          alert('bb')
+        }
+        return false;
+      });
+    }
+  };
 
   return {
     initialize : function(){
       coderwall.retrieveAchievements(coderwall.addBadgesToWall);
       github.retrieveRepositories(github.addReposToWall);
       ui.tooltip('.web_contacts');
+      contactForm.setup('#contact-form'); 
     }
   };
 
