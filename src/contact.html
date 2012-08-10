@@ -5,36 +5,39 @@ section: contact
 title: contact
 permalink: /contact/
 ---
-<h2>Contact</h2>
-<p>
-    Some text
-</p>
-<form>
-    <fieldset>
-        <legend>Contact form</legend>
+<div class="row-fluid">
+  <section class="notifications" />
+  <div class="span5">
+    <h2>Contact me</h2>
+    <p>
+    If you want to contact me, you can use any of the social networks that I'm present on or send me an e-mail throught the form on the side.
+    </p>
+  </div>
+  <div class="well offset5">  
+    <form id="contact-form" action="http://getsimpleform.com/messages?form_api_token=c8cc207d3b7b70f02aaf9b7913a056af" method="POST">
+      <fieldset>
         <div class="clearfix">
-            <label for="xlInput">Name:</label>
-
-            <div class="input">
-                <input id="" class="large" type="text" size="30" name="xlInput"/>
-            </div>
+          <label for="name">Name:</label>
+          <div class="input">
+            <input class="large" type="text" size="30" name="name" id="name" />
+          </div>
         </div>
         <div class="clearfix">
-            <label for="xlInput">E-mail:</label>
-
-            <div class="input">
-                <input id="" class="large" type="text" size="30" name="xlInput"/>
-            </div>
+          <label for="email">E-mail:</label>
+          <div class="input">
+            <input class="large" type="text" size="30" name="email" id="email"/>
+          </div>
         </div>
         <div class="clearfix">
-            <label for="xlInput">Message:</label>
-
-            <div class="input">
-                <textarea rows="5" name="textarea2" id="textarea2" class="xxlarge"></textarea>
-            </div>
+          <label for="message">Message:</label>
+          <div class="input">
+            <textarea rows="9" name="message"class="input-xlarge" id="message"></textarea>
+          </div>
         </div>
         <div class="actions">
-            <input class="btn primary" type="submit" value="Send message">
+          <input class="btn btn-primary btn-large" type="submit" value="Send message">
         </div>
-    </fieldset>
-</form>
+      </fieldset>
+    </form>
+  </div>
+</div>
