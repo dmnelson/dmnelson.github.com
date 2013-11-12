@@ -85,7 +85,6 @@ header.hero-unit h1, .brand {
   font-size: 22px;
 }
 
-
 .breadcrumb {
   margin: 0;
   margin-bottom: 20px;
@@ -132,7 +131,7 @@ footer {
 }
 
 .index-content{
-  background: url('/assets/images/photo.jpg') 0 -160px  no-repeat; 
+  background: lightgray url('/assets/images/photo.jpg') 0 -160px  no-repeat;
   border-radius: 4px;
   padding-top: 50px;
   height: 400px;
