@@ -50,6 +50,7 @@ GEM
       syntax (>= 1.0.0)
     mime-types (1.19)
     netrc (0.7.5)
+    newrelic_rpm (3.7.2.195)
     posix-spawn (0.3.6)
     rack (1.4.1)
     raindrops (0.10.0)
@@ -75,6 +76,7 @@ DEPENDENCIES
   heroku
   jekyll
   jekyll-less
+  newrelic_rpm
   rack-jekyll!
   therubyracer
   thin
