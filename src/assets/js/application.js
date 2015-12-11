@@ -67,7 +67,7 @@
         'href': repository.html_url,
         'title': repository.description
       }, repository.name).prepend(ui.createElement('i', {'class': 'icon-screenshot'}));
-      return ui.createElement('li').append(link); 
+      return ui.createElement('li').append(link);
     },
 
     addReposToWall: function(repos){
@@ -76,7 +76,8 @@
       wall.ready(function(){
         var list = ui.createElement('ul', {'class': 'nav nav-list'}).appendTo(wall);
         $.each(repos, function(i, item){
-          list.append(github.createRepoLink(item)); 
+          if(!item.fork)
+            list.append(github.createRepoLink(item));
         });
         ui.tooltip(wall, {placement: 'top'});
         wall.show("fast");
@@ -122,17 +123,17 @@
 
   var contactForm = {
     setup : function(element){
-      var form = $(element); 
+      var form = $(element);
       form.submit(function(event){
         $('.notifications').empty();
         try{
-          event.preventDefault(); 
+          event.preventDefault();
           $.post(form.attr('action'), form.serialize()).complete(function(){
             var alert = ui.alertSuccess('Thanks! Your message was sent successfully and will soon be read.').hide();
             $('.notifications').append(alert);
             alert.show('slow');
           });
-          
+
         } catch (e) {
           $('.notifications').append(ui.alertSuccess('Oops! Sorry, something happened and your message was not sent. Please try again later.').hide());
           $('.notifications div').show('slow');
@@ -147,7 +148,7 @@
       coderwall.retrieveAchievements(coderwall.addBadgesToWall);
       github.retrieveRepositories(github.addReposToWall);
       ui.tooltip('.web_contacts');
-      contactForm.setup('#contact-form'); 
+      contactForm.setup('#contact-form');
     }
   };
 
